@@ -1,0 +1,137 @@
+@import "./reset.scss";
+@import "./anime.scss";
+@import "../iconfont/iconfont.css";
+
+@font-face {
+  font-family: "PF";
+  src: url("../fonts/PingFang.ttf") format("truetype");
+}
+@font-face {
+  font-family: "FZLT-LARGE";
+  src: url("../fonts/FZLT-large.ttf") format("truetype");
+}
+@font-face {
+  font-family: "FZLT-MEDIUM";
+  src: url("../fonts/FZLT-medium.TTF") format("truetype");
+}
+
+/*定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸*/
+.no-scroll::-webkit-scrollbar {
+  width: 4px;
+  height: 5px;
+  background-color: $color-D8D8D8;
+}
+.no-scroll ::-webkit-scrollbar {
+  width: 4px;
+  height: 5px;
+  background-color: $color-D8D8D8;
+}
+
+// /*定义滚动条轨道 内阴影+圆角*/
+.no-scroll::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 3px rgba(102, 191, 222, 0.3);
+  border-radius: 6px;
+  background-color: $color-D8D8D8;
+}
+.no-scroll ::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 3px rgba(102, 191, 222, 0.3);
+  border-radius: 6px;
+  background-color: $color-D8D8D8;
+}
+
+/*定义滑块 内阴影+圆角*/
+.no-scroll::-webkit-scrollbar-thumb {
+  border-radius: 6px;
+  box-shadow: inset 0 0 3px rgba(102, 191, 222, 0.3);
+  background-color: $color-66BFDE;
+}
+.no-scroll ::-webkit-scrollbar-thumb {
+  border-radius: 6px;
+  box-shadow: inset 0 0 3px rgba(102, 191, 222, 0.3);
+  background-color: $color-66BFDE;
+}
+
+html,
+body {
+  font-family: "PF", -apple-system, "Helvetica Neue", Helvetica, Arial,
+    "PingFang SC", "Hiragino Sans GB", "WenQuanYi Micro Hei", "Microsoft Yahei",
+    sans-serif;
+  line-height: 1.1;
+  font-size: 14px;
+  font-weight: normal;
+  box-sizing: border-box;
+}
+
+/* 通用样式 */
+.rel {
+  position: relative;
+}
+.pointer {
+  cursor: pointer;
+}
+// 布局
+
+.fx {
+  display: flex;
+}
+.fx-h-c {
+  justify-content: center;
+}
+.fx-v-c {
+  align-items: center;
+}
+.fx-1 {
+  flex: 1;
+}
+.fx-sb {
+  justify-content: space-between;
+}
+
+// 首页的select
+.header-popper {
+  background-color: $color-3C71FF;
+  box-shadow: 0px 9px 28px 8px rgba(0, 0, 0, 0.05),
+    0px 6px 16px 0px rgba(0, 0, 0, 0.08), 0px 3px 6px -4px rgba(0, 0, 0, 0.12);
+  border-radius: 0;
+  border: none;
+  .el-select-dropdown__item {
+    color: #ffffff;
+    background-color: transparent;
+    font-weight: 400;
+    line-height: 32px;
+    height: 32px;
+    &:hover,
+    &.selected {
+      background: rgba(255, 255, 255, 0.3);
+    }
+    &.selected {
+      font-weight: bold;
+    }
+  }
+  .popper__arrow::after {
+    border-bottom-color: $color-3C71FF !important;
+  }
+  .popper__arrow {
+    border-bottom-color: $color-3C71FF !important;
+  }
+}
+.wrap-attract-bg1 {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 20;
+  background: url("~@img/second/attract-bg1.png") no-repeat center center;
+  background-size: cover;
+}
+.wrap-attract-bg2 {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 20;
+  background: url("~@img/second/attract-bg2.png") no-repeat center center;
+  background-size: cover;
+}
